@@ -1,122 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Tarun G | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
-      html {
-    scroll-behavior: auto;
-  }
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-    }
-    nav {
-      background: #111;
-      padding: 15px;
-      position: sticky;
-      top: 0;
-    }
-    nav a {
-      color: white;
-      margin-right: 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-  section {
-  padding: 100px 20px;
-  min-height: 100vh;
-}
-
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tarun G | Developer Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<nav>
-  <a href="#about">About</a>
-  <a href="#skills">Skills</a>
-  <a href="#projects">Projects</a>
-  <a href="#contact">Contact</a>
-  <a href="#experience">Experience</a>
-</nav>
+  <header class="hero">
+    <div class="container">
+      <h1>Tarun G</h1>
+      <p class="headline">Your Headline from LinkedIn – e.g., Passionate Web Developer | Smooth UI Enthusiast</p>
+      <a href="#about" class="cta">Explore My Journey</a>
+    </div>
+  </header>
 
-<section id="about">
-  <h2>About Me</h2>
-  <p>
-    I am Tarun G, a passionate developer interested in building modern web applications.
-  </p>
-  <p>
-    I enjoy learning new technologies, contributing to GitHub projects,
-    and improving my problem-solving skills.
-  </p>
-</section>
+  <main>
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>Paste your rewritten About section here – make it personal and unique!</p>
+      </div>
+    </section>
 
-<section id="skills">
-  <h2>Skills</h2>
-  <ul>
-    <li>HTML, CSS, JavaScript</li>
-    <li>React (learning)</li>
-    <li>Git & GitHub</li>
-  </ul>
-</section>
-  
-<section id="experience">
-  <h2>Experience</h2>
-  <ul>
-    <li>Intern – Web Development</li>
-    <li>Built responsive UI using HTML & CSS</li>
-    <li>Worked with GitHub for version control</li>
-  </ul>
-</section>
-  
-<section id="projects">
-  <h2>Projects</h2>
-  <p>
-    Visit my GitHub:
-    <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank">
-      github.com/YOUR_GITHUB_USERNAME
-    </a>
-  </p>
-</section>
+    <section id="experience" class="section">
+      <div class="container">
+        <h2>Experience</h2>
+        <div class="timeline">
+          <!-- Repeat for each job -->
+          <div class="job">
+            <h3>Job Title</h3>
+            <h4>Company Name • Dates</h4>
+            <ul>
+              <li>Achievement 1 (make it specific to you)</li>
+              <li>Achievement 2</li>
+              <li>Achievement 3</li>
+            </ul>
+          </div>
+          <!-- Add more jobs -->
+        </div>
+      </div>
+    </section>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <p>
-    LinkedIn:
-    <a href="https://www.linkedin.com/in/tarun-g-5798511b2/" target="_blank">
-      Tarun G
-    </a>
-  </p>
-</section>
-<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <section id="skills" class="section">
+      <div class="container">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          <span>React</span><span>Node.js</span><span>Git</span>
+          <!-- Add your own skills -->
+        </div>
+      </div>
+    </section>
 
-<script>
-  const lenis = new Lenis({
-    duration: 1.4,
-    smooth: true,
-    smoothWheel: true,
-    smoothTouch: false,
-  });
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <h3>Project Name</h3>
+            <p>Description – what you built and technologies used.</p>
+            <a href="link-to-live-or-github" target="_blank">View Project →</a>
+          </div>
+          <!-- Add 3–6 projects -->
+        </div>
+      </div>
+    </section>
 
-  function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-  }
-  requestAnimationFrame(raf);
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Get in Touch</h2>
+        <p>Email: your@email.com</p>
+        <p><a href="https://in.linkedin.com/in/tarun-g-5798511b2" target="_blank">LinkedIn</a> • <a href="https://github.com/yourusername" target="_blank">GitHub</a></p>
+      </div>
+    </section>
+  </main>
 
-  // FIX anchor navigation
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        lenis.scrollTo(target);
-      }
-    });
-  });
-</script>
-
+  <script type="module" src="script.js"></script>
 </body>
 </html>

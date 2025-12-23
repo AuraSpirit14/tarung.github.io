@@ -22,3 +22,24 @@ h2 { font-size: 3rem; margin-bottom: 3rem; text-align: center; }
 .project-card a { color: #00d4ff; }
 
 #contact { text-align: center; background: #16213e; }
+
+.section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optional: Hover effect for project cards */
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 212, 255, 0.3); /* Matches your blue theme */
+}

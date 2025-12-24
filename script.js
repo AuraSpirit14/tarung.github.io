@@ -34,3 +34,13 @@ sections.forEach((sec, index) => {
   sec.style.transition = `opacity 0.8s ease ${index * 0.2}s, transform 0.8s ease ${index * 0.2}s`;
   observer.observe(sec);
 });
+
+// Unique: Scroll-to-top button
+const scrollTopBtn = document.createElement('button');
+scrollTopBtn.textContent = '↑';
+scrollTopBtn.className = 'scroll-top';
+document.body.appendChild(scrollTopBtn);
+scrollTopBtn.addEventListener('click', () => lenis.scrollTo(0));
+window.addEventListener('scroll', () => {
+  scrollTopBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+});

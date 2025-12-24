@@ -1,0 +1,20 @@
+{
+  "headline": "Passionate Web Developer | UI/UX Enthusiast",
+  "about": "I'm Tarun G, a full-stack developer with 3+ years of experience...",
+  "experience": [
+    {
+      "title": "Software Engineer",
+      "company": "Tech Corp",
+      "dates": "2020 - Present",
+      "achievements": ["Built scalable apps", "Led team of 5", "Improved performance by 40%"]
+    }
+  ],
+  "skills": ["HTML", "CSS", "JavaScript", "React", "Node.js"],
+  "projects": [
+    {
+      "name": "Portfolio Site",
+      "description": "A responsive portfolio built with HTML/CSS/JS.",
+      "link": "https://github.com/AuraSpirit14/tarung.github.io"
+    }
+  ]
+}

@@ -19,13 +19,19 @@
       "company": "Hacktify Cyber Security · Internship",
       "dates": "Jan 2025 - Feb 2025",
       "achievements": ["Identified 15+ critical web application vulnerabilities through OWASP Top 10 penetration testing using Burp Suite, delivering detailed PoC reports."]
-    }    
+    }
+   {
+      "title": "Cybersecurity ConsultantCybersecurity Consultant",
+      "company": "Digitdefence · InternshipDigitdefence",
+      "dates": "Oct 2024 - Dec 2024",
+      "achievements": ["Conducted network security assessments using Burp Suite and Wireshark, analyzing traffic to identify threats and support secure coding improvements."]
+    }
   ],
-  "skills": ["HTML", "CSS", "JavaScript", "React", "Node.js"],
+  "skills": ["Kali Linux", "Wireshark", "Penetration Testing", "Acunetix", "Metasploit", "Tenable Nessus", "Burp Suite", "SIEM", "Log Analysis", "Incident Response", "Wazuh", "Cybersecurity", "Design Thinking","Problem Solving"],
   "projects": [
     {
       "name": "Portfolio Site",
-      "description": "A responsive portfolio built with HTML/CSS/JS.",
+      "description": "A cybersecurity-focused portfolio showcasing hands-on projects, SOC experience, penetration testing work, and security tools expertise.",
       "link": "https://github.com/AuraSpirit14/"
     }
   ]

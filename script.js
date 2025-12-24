@@ -102,3 +102,13 @@ window.addEventListener('scroll', () => {
 
 // Load data on page load
 document.addEventListener('DOMContentLoaded', loadPortfolioData);
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault(); // Prevent default jump
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      lenis.scrollTo(target); // Use Lenis for smooth scroll
+    }
+  });
+});

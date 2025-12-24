@@ -2,44 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tarun G | Developer Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <!-- Lenis for smooth scrolling (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <!-- Typed.js for typing animation (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script>
 </head>
 <body>
+  <!-- Dark/Light Mode Toggle (Unique Feature) -->
+  <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
 
   <header class="hero">
     <div class="container">
       <h1>Tarun G</h1>
-      <p class="headline">Your Headline from LinkedIn – e.g., Passionate Web Developer | Smooth UI Enthusiast</p>
+      <p class="headline" id="typed-headline"></p> <!-- Will be animated -->
       <a href="#about" class="cta">Explore My Journey</a>
     </div>
+    <!-- Particle Background (Unique Visual) -->
+    <div class="particles"></div>
   </header>
 
   <main>
     <section id="about" class="section">
       <div class="container">
         <h2>About Me</h2>
-        <p>Paste your rewritten About section here – make it personal and unique!!!!</p>
+        <p id="about-content">Loading...</p> <!-- Dynamic content -->
       </div>
     </section>
 
     <section id="experience" class="section">
       <div class="container">
         <h2>Experience</h2>
-        <div class="timeline">
-          <!-- Repeat for each job -->
-          <div class="job">
-            <h3>Job Title</h3>
-            <h4>Company Name • Dates</h4>
-            <ul>
-              <li>Achievement 1 (make it specific to you)</li>
-              <li>Achievement 2</li>
-              <li>Achievement 3</li>
-            </ul>
-          </div>
-          <!-- Add more jobs -->
+        <div class="timeline" id="experience-timeline">
+          <!-- Dynamic jobs will be inserted here -->
         </div>
       </div>
     </section>
@@ -47,10 +45,8 @@
     <section id="skills" class="section">
       <div class="container">
         <h2>Skills</h2>
-        <div class="skills-grid">
-          <span>HTML</span><span>CSS</span><span>JavaScript</span>
-          <span>React</span><span>Node.js</span><span>Git</span>
-          <!-- Add your own skills -->
+        <div class="skills-grid" id="skills-grid">
+          <!-- Dynamic skills will be inserted here -->
         </div>
       </div>
     </section>
@@ -58,13 +54,8 @@
     <section id="projects" class="section">
       <div class="container">
         <h2>Projects</h2>
-        <div class="projects-grid">
-          <div class="project-card">
-            <h3>Project Name</h3>
-            <p>Description – what you built and technologies used.</p>
-            <a href="link-to-live-or-github" target="_blank">View Project →</a>
-          </div>
-          <!-- Add 3–6 projects -->
+        <div class="projects-grid" id="projects-grid">
+          <!-- Dynamic projects will be inserted here -->
         </div>
       </div>
     </section>
@@ -72,12 +63,21 @@
     <section id="contact" class="section">
       <div class="container">
         <h2>Get in Touch</h2>
-        <p>Email: your@email.com</p>
-        <p><a href="https://in.linkedin.com/in/tarun-g-5798511b2" target="_blank">LinkedIn</a> • <a href="https://github.com/yourusername" target="_blank">GitHub</a></p>
+        <p>Email: tarun@example.com</p> <!-- Replace with your email -->
+        <p>
+          <a href="https://in.linkedin.com/in/tarun-g-5798511b2" target="_blank" rel="noopener">LinkedIn</a> • 
+          <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
+        </p>
       </div>
     </section>
   </main>
 
-  <script type="module" src="script.js"></script>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2023 Tarun G. Built with ❤️ using HTML, CSS, and JS.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

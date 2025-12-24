@@ -1,33 +1,33 @@
 {
   "headline": "Passionate about Cyber Security",
-  "about": "I'm Tarun G, Nxt-Gen End User Security Engineer | VAPT Specialist | CSPP | Pen Testing & VA | EDR (CrowdStrike/Sophos) | Threat Detection | SIEM Operations ",
+  "about": "I'm Tarun G, Nxt-Gen End User Security Engineer | VAPT Specialist | CSPP | Pen Testing & VA | EDR (CrowdStrike/Sophos) | Threat Detection | SIEM Operations",
   "experience": [
     {
-      "title": "Nxt-Gen End User Security EngineerNxt-Gen End User Security Engineer",
+      "title": "Nxt-Gen End User Security Engineer",
       "company": "Quadrasystems.net India Pvt Ltd",
       "dates": "2025 - Present",
       "achievements": ["Strengthened endpoint security through proactive monitoring, incident triage, and Zero Trust enforcement using CrowdStrike and Sophos."]
     },
-   {
+    {
       "title": "Cybersecurity Intern - Associate L1",
       "company": "Infotact Solutions · Internship",
       "dates": "Feb 2025 - Apr 2025",
       "achievements": ["Led SOC operations by coordinating intern teams and responding to DoS and brute-force attacks using Wazuh SIEM and Suricata, improving incident response efficiency."]
     },
-   {
-      "title": "Penetration Testing InternPenetration Testing Intern",
+    {
+      "title": "Penetration Testing Intern",
       "company": "Hacktify Cyber Security · Internship",
       "dates": "Jan 2025 - Feb 2025",
       "achievements": ["Identified 15+ critical web application vulnerabilities through OWASP Top 10 penetration testing using Burp Suite, delivering detailed PoC reports."]
     },
-   {
-      "title": "Cybersecurity ConsultantCybersecurity Consultant",
-      "company": "Digitdefence · InternshipDigitdefence",
+    {
+      "title": "Cybersecurity Consultant",
+      "company": "Digitdefence · Internship",
       "dates": "Oct 2024 - Dec 2024",
       "achievements": ["Conducted network security assessments using Burp Suite and Wireshark, analyzing traffic to identify threats and support secure coding improvements."]
     }
   ],
-  "skills": ["Kali Linux", "Wireshark", "Penetration Testing", "Acunetix", "Metasploit", "Tenable Nessus", "Burp Suite", "SIEM", "Log Analysis", "Incident Response", "Wazuh", "Cybersecurity", "Design Thinking","Problem Solving"],
+  "skills": ["Kali Linux", "Wireshark", "Penetration Testing", "Acunetix", "Metasploit", "Tenable Nessus", "Burp Suite", "SIEM", "Log Analysis", "Incident Response", "Wazuh", "Cybersecurity", "Design Thinking", "Problem Solving"],
   "projects": [
     {
       "name": "Portfolio Site",

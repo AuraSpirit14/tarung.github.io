@@ -2,82 +2,799 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <title>Tarun G | Nxt-Gen End User Security Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tarun G | Cyber Security</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <!-- Lenis for smooth scrolling (CDN) -->
-  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
-  <!-- Typed.js for typing animation (CDN) -->
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script>
+  <meta name="description" content="Cybersecurity portfolio of Tarun G - Nxt-Gen End User Security Engineer, VAPT Specialist, SOC & SIEM Operations." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #050816;
+      --bg-alt: #0b1020;
+      --accent: #00f6ff;
+      --accent-soft: rgba(0, 246, 255, 0.18);
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --card: #0f172a;
+      --danger: #f97373;
+      --success: #4ade80;
+      --warning: #facc15;
+    }
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #111827 0, #020617 40%, #000 100%);
+      color: var(--text);
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(to right, rgba(15,23,42,0.8), rgba(3,7,18,0.95));
+      border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+    }
+    .nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0.6rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+    }
+    .logo-mark {
+      width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      border: 1px solid var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      box-shadow: 0 0 12px rgba(0, 246, 255, 0.8);
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.85rem;
+    }
+    .nav-links a {
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--accent);
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    h1, h2, h3 {
+      margin: 0 0 0.75rem;
+    }
+    h2 {
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+    }
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+    .section-accent {
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(to right, var(--accent), transparent);
+    }
+
+    /* Hero */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 2rem;
+      align-items: center;
+      padding-top: 1.5rem;
+    }
+    .hero-title {
+      font-size: clamp(2.1rem, 4vw, 2.8rem);
+      line-height: 1.1;
+      margin-bottom: 0.8rem;
+    }
+    .hero-subtitle {
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+    .hero-tagline {
+      font-size: 0.98rem;
+      color: var(--muted);
+      max-width: 32rem;
+      line-height: 1.5;
+    }
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1.1rem 0;
+    }
+    .badge {
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      padding: 0.25rem 0.7rem;
+      font-size: 0.75rem;
+      color: var(--muted);
+      background: rgba(15, 23, 42, 0.9);
+    }
+    .badge-primary {
+      border-color: rgba(56, 189, 248, 0.8);
+      color: var(--accent);
+      background: rgba(8, 47, 73, 0.9);
+    }
+    .hero-buttons {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 1.25rem;
+      flex-wrap: wrap;
+    }
+    .btn {
+      border-radius: 999px;
+      padding: 0.6rem 1.2rem;
+      font-size: 0.85rem;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.98);
+      color: var(--text);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .btn-primary {
+      border-color: var(--accent);
+      background: linear-gradient(135deg, #022c43, #0f172a);
+      box-shadow: 0 0 18px rgba(0, 246, 255, 0.5);
+    }
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 0 12px rgba(15, 23, 42, 0.6);
+    }
+
+    .hero-panel {
+      border-radius: 1rem;
+      padding: 1rem;
+      background: radial-gradient(circle at top left, rgba(45, 212, 191, 0.15), transparent 55%),
+                  radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.12), transparent 55%),
+                  rgba(15, 23, 42, 0.96);
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.8);
+      font-size: 0.8rem;
+    }
+    .hero-panel-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.8rem;
+    }
+    .terminal-dots {
+      display: flex;
+      gap: 0.35rem;
+    }
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+    }
+    .dot.red { background: #f87171; }
+    .dot.amber { background: #fbbf24; }
+    .dot.green { background: #4ade80; }
+    .hero-panel-body {
+      font-family: "SF Mono", ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      line-height: 1.5;
+      color: #e5e7eb;
+    }
+    .prompt {
+      color: #22c55e;
+    }
+    .log-muted {
+      color: #9ca3af;
+    }
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-top: 0.6rem;
+    }
+    .pill {
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      padding: 0.15rem 0.55rem;
+      font-size: 0.65rem;
+      color: var(--muted);
+    }
+
+    /* Grid / cards */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.25rem;
+    }
+    .card {
+      border-radius: 0.9rem;
+      background: linear-gradient(145deg, rgba(15, 23, 42, 0.97), rgba(2, 6, 23, 0.98));
+      border: 1px solid rgba(31, 41, 55, 0.9);
+      padding: 1rem;
+      box-shadow: 0 18px 35px rgba(15, 23, 42, 0.8);
+      font-size: 0.85rem;
+    }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 0.4rem;
+      margin-bottom: 0.4rem;
+    }
+    .card-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+    .card-subtitle {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+      margin: 0.35rem 0 0.6rem;
+    }
+    .chip {
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      font-size: 0.7rem;
+      padding: 0.15rem 0.45rem;
+      color: var(--muted);
+    }
+    .card ul {
+      margin: 0.4rem 0 0;
+      padding-left: 1.1rem;
+    }
+    .card li {
+      margin-bottom: 0.25rem;
+      color: var(--muted);
+    }
+
+    /* Timeline */
+    .timeline {
+      border-left: 1px dashed rgba(148, 163, 184, 0.4);
+      padding-left: 1rem;
+      margin-left: 0.4rem;
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 1.4rem;
+    }
+    .timeline-dot {
+      position: absolute;
+      left: -1.22rem;
+      top: 0.2rem;
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 10px rgba(0, 246, 255, 0.9);
+    }
+    .timeline-role {
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    .timeline-org {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .timeline-date {
+      font-size: 0.75rem;
+      color: #64748b;
+      margin-bottom: 0.25rem;
+    }
+    .timeline-item ul {
+      margin-top: 0.3rem;
+      padding-left: 1rem;
+    }
+    .timeline-item li {
+      margin-bottom: 0.2rem;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    /* Skills matrix */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+    .skills-category-title {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+    }
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+    .skills-list span {
+      font-size: 0.75rem;
+      padding: 0.18rem 0.55rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      color: var(--muted);
+    }
+
+    /* Projects */
+    .project-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 0.15rem;
+    }
+    .project-meta {
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-bottom: 0.45rem;
+    }
+    .project-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+      margin-top: 0.25rem;
+    }
+    .project-stack span {
+      font-size: 0.7rem;
+      padding: 0.15rem 0.45rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      color: var(--muted);
+    }
+
+    /* Contact */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 2fr 3fr;
+      gap: 1.25rem;
+    }
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.85rem;
+      margin-bottom: 0.35rem;
+      color: var(--muted);
+    }
+    .contact-label {
+      font-size: 0.75rem;
+      color: #6b7280;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      min-width: 70px;
+    }
+    .contact-badge {
+      font-size: 0.75rem;
+      border-radius: 999px;
+      padding: 0.2rem 0.55rem;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      background: rgba(15, 23, 42, 0.98);
+      color: var(--muted);
+    }
+
+    footer {
+      border-top: 1px solid rgba(31, 41, 55, 0.9);
+      padding: 1rem 1.25rem 1.5rem;
+      font-size: 0.75rem;
+      color: #64748b;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+    @media (max-width: 640px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .nav-links {
+        width: 100%;
+        justify-content: space-between;
+      }
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
-  <!-- Dark/Light Mode Toggle (Unique Feature) -->
-  <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
-
-  <header class="hero">
-    <div class="container">
-      <h1>Tarun G</h1>
-      <p class="headline" id="typed-headline"></p> <!-- Will be animated -->
-      <a href="#about" class="cta">Explore My Journey</a>
+<header>
+  <nav class="nav">
+    <div class="logo">
+      <div class="logo-mark">TG</div>
+      <span>Tarun&nbsp;G / Security</span>
     </div>
-    <!-- Particle Background (Unique Visual) -->
-    <div class="particles"></div>
-  </header>
+    <div class="nav-links">
+      <a href="#about" class="active">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Labs</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
 
-  <main>
-    <section id="about" class="section">
-      <div class="container">
-        <h2>About Me</h2>
-        <p id="about-content">Loading...</p> <!-- Dynamic content -->
-      </div>
-    </section>
-
-    <section id="experience" class="section">
-      <div class="container">
-        <h2>Experience</h2>
-        <div class="timeline" id="experience-timeline">
-          <!-- Dynamic jobs will be inserted here -->
+<main>
+  <!-- HERO / ABOUT -->
+  <section id="about">
+    <div class="hero">
+      <div>
+        <div class="hero-subtitle">Nxt-Gen End User Security Engineer</div>
+        <h1 class="hero-title">Pen Testing & SOC operations with a hands-on, lab-driven mindset.</h1>
+        <p class="hero-tagline">
+          Cybersecurity professional specializing in endpoint hardening, web application VAPT, and SOC monitoring using EDR, SIEM, and modern offensive toolsets.
+          Focused on turning noisy alerts into actionable detection and response.
+        </p>
+        <div class="hero-badges">
+          <span class="badge badge-primary">VAPT Specialist</span>
+          <span class="badge">CrowdStrike &amp; Sophos EDR</span>
+          <span class="badge">Wazuh &amp; Suricata SIEM</span>
+          <span class="badge">OWASP Top 10 | Web &amp; Network Security</span>
+        </div>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">View Security Labs</a>
+          <a href="#experience" class="btn">Incident &amp; VAPT Experience</a>
         </div>
       </div>
-    </section>
 
-    <section id="skills" class="section">
-      <div class="container">
-        <h2>Skills</h2>
-        <div class="skills-grid" id="skills-grid">
-          <!-- Dynamic skills will be inserted here -->
+      <aside class="hero-panel" aria-label="Threat console summary">
+        <div class="hero-panel-header">
+          <span style="font-size:0.78rem;color:#9ca3af;">/var/log/security/portfolio.log</span>
+          <div class="terminal-dots">
+            <span class="dot red"></span>
+            <span class="dot amber"></span>
+            <span class="dot green"></span>
+          </div>
+        </div>
+        <div class="hero-panel-body">
+          <div class="log-muted">[INIT] Loading analyst profile...</div>
+          <div><span class="prompt">tarun@g-sec</span>:&nbsp;<span>whoami</span></div>
+          <div>&rarr; Nxt-Gen End User Security Engineer | VAPT Specialist | SOC &amp; SIEM Operations</div>
+          <br />
+          <div class="log-muted">[SCAN] Capabilities detected:</div>
+          <ul style="margin:0.35rem 0 0 1rem;padding-left:0.5rem;">
+            <li>Endpoint security &amp; Zero Trust enforcement (CrowdStrike, Sophos).</li>
+            <li>Web app VAPT across OWASP Top 10 with Burp Suite &amp; Metasploit.</li>
+            <li>Threat detection &amp; incident response with Wazuh SIEM &amp; Suricata IDS.</li>
+          </ul>
+          <div class="pill-row">
+            <span class="pill">Kali Linux</span>
+            <span class="pill">Wireshark</span>
+            <span class="pill">Burp Suite</span>
+            <span class="pill">Nessus</span>
+            <span class="pill">Metasploit</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="section-header">
+      <h2>Skills matrix</h2>
+      <div class="section-accent"></div>
+    </div>
+    <div class="skills-grid">
+      <div class="card">
+        <div class="skills-category-title">Offensive security &amp; vapt</div>
+        <div class="skills-list">
+          <span>Kali Linux</span>
+          <span>Penetration Testing</span>
+          <span>Metasploit</span>
+          <span>Burp Suite</span>
+          <span>Acunetix</span>
+          <span>Nmap</span>
+          <span>SQLi / XSS / IDOR</span>
         </div>
       </div>
-    </section>
-
-    <section id="projects" class="section">
-      <div class="container">
-        <h2>Projects</h2>
-        <div class="projects-grid" id="projects-grid">
-          <!-- Dynamic projects will be inserted here -->
+      <div class="card">
+        <div class="skills-category-title">Soc, detection &amp; response</div>
+        <div class="skills-list">
+          <span>SIEM (Wazuh, Splunk)</span>
+          <span>Log Analysis</span>
+          <span>Incident Response</span>
+          <span>Threat Detection</span>
+          <span>Suricata IDS</span>
+          <span>EDR (CrowdStrike, Sophos)</span>
         </div>
       </div>
-    </section>
+      <div class="card">
+        <div class="skills-category-title">networking, scripting &amp; core</div>
+        <div class="skills-list">
+          <span>Wireshark</span>
+          <span>TCP/IP &amp; OSI</span>
+          <span>Firewalls &amp; IDS/IPS</span>
+          <span>Python</span>
+          <span>SQL</span>
+          <span>Linux (Offensive toolsets)</span>
+          <span>Secure Development basics</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section id="contact" class="section">
-      <div class="container">
-        <h2>Get in Touch</h2>
-        <p>Email: tarungiri963@gmail.com</p> <!-- Replace with your email -->
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="section-header">
+      <h2>Experience timeline</h2>
+      <div class="section-accent"></div>
+    </div>
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-role">Nxt-Gen End User Security Engineer</div>
+        <div class="timeline-org">Quadrasystems.net India Pvt Ltd</div>
+        <div class="timeline-date">2025 - Present</div>
+        <ul>
+          <li>Strengthening endpoint security with proactive monitoring and incident triage using CrowdStrike and Sophos.</li>
+          <li>Applying Zero Trust principles to reduce lateral movement and improve end-user protection.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-role">Cybersecurity Intern - Associate L1</div>
+        <div class="timeline-org">Infotact Solutions</div>
+        <div class="timeline-date">Feb 2025 - Apr 2025</div>
+        <ul>
+          <li>Led intern SOC operations, monitoring threats and analyzing logs with Wazuh SIEM.</li>
+          <li>Responded to DoS and brute-force attacks using Wazuh &amp; Suricata, improving incident response workflows.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-role">Penetration Testing Intern</div>
+        <div class="timeline-org">Hacktify Cyber Security</div>
+        <div class="timeline-date">Jan 2025 - Feb 2025</div>
+        <ul>
+          <li>Performed web application penetration tests against OWASP Top 10 targets using Burp Suite &amp; Metasploit.</li>
+          <li>Identified 15+ critical vulnerabilities and produced detailed PoC reports for remediation.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-role">Cybersecurity Consultant (Intern)</div>
+        <div class="timeline-org">Digitdefence</div>
+        <div class="timeline-date">Oct 2024 - Dec 2024</div>
+        <ul>
+          <li>Conducted web &amp; network security assessments using Burp Suite and Wireshark.</li>
+          <li>Captured and analyzed packets, supporting secure coding and highlighting risks in insecure networks.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS / LABS -->
+  <section id="projects">
+    <div class="section-header">
+      <h2>Security labs &amp; projects</h2>
+      <div class="section-accent"></div>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="project-title">VAPT on Metasploitable VM</div>
+        <div class="project-meta">Secuerium Technologies &mdash; Aug 2025 - Sep 2025</div>
         <p>
-          <a href="https://in.linkedin.com/in/tarun-g-5798511b2" target="_blank" rel="noopener">LinkedIn</a> • 
-          <a href="https://github.com/AuraSpirit14/" target="_blank" rel="noopener">GitHub</a>
+          Conducted full-stack penetration testing on Metasploitable VM, exploiting misconfigurations and outdated services to simulate real attacker behavior.
+        </p>
+        <ul>
+          <li>Performed vulnerability scanning, enumeration, and exploit execution to gain elevated access.</li>
+          <li>Documented findings with step-by-step exploitation paths and mitigation recommendations.</li>
+        </ul>
+        <div class="project-stack">
+          <span>Kali Linux</span>
+          <span>Metasploit</span>
+          <span>Nmap</span>
+          <span>Vulnerability Scanning</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="project-title">Security Operations &amp; IR with Wazuh SIEM</div>
+        <div class="project-meta">Infotact Solutions &mdash; SOC Lab</div>
+        <p>
+          Built and operated a SOC-style lab using Wazuh SIEM, Suricata, and iptables to detect and respond to live attacks in real time.
+        </p>
+        <ul>
+          <li>Investigated alerts for DoS and brute-force attacks, tuning rules to reduce noise and improve fidelity.</li>
+          <li>Created incident workflows and documentation to guide response and post-incident review.</li>
+        </ul>
+        <div class="project-stack">
+          <span>Wazuh SIEM</span>
+          <span>Suricata</span>
+          <span>Log Analysis</span>
+          <span>Incident Response</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="project-title">Web &amp; Network Security Testing</div>
+        <div class="project-meta">Digitdefence &mdash; Oct 2024 - Dec 2024</div>
+        <p>
+          Performed web application security testing focusing on redirect and injection flaws, combined with network traffic analysis to expose insecure practices.
+        </p>
+        <ul>
+          <li>Identified issues like unsafe redirects and injection opportunities using Burp Suite.</li>
+          <li>Captured and analyzed unencrypted HTTP traffic with Wireshark to demonstrate risk to stakeholders.</li>
+        </ul>
+        <div class="project-stack">
+          <span>Burp Suite</span>
+          <span>Wireshark</span>
+          <span>OWASP Top 10</span>
+          <span>Secure Coding Awareness</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="project-title">SOC Automation &amp; Detection Ideas</div>
+        <div class="project-meta">Personal Lab</div>
+        <p>
+          Ongoing experiments with scripting and log parsing to speed up investigations and strengthen detection engineering capability.
+        </p>
+        <ul>
+          <li>Using Python and SQL to parse logs, enrich events, and prototype alert triage helpers.</li>
+          <li>Designing detection ideas for brute-force, lateral movement, and suspicious web activity.</li>
+        </ul>
+        <div class="project-stack">
+          <span>Python</span>
+          <span>SQL</span>
+          <span>Detection Engineering</span>
+          <span>Automation</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION & CERTIFICATIONS -->
+  <section>
+    <div class="section-header">
+      <h2>Education &amp; certifications</h2>
+      <div class="section-accent"></div>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">Bachelor of Computer Applications</div>
+          <div class="card-subtitle">2021 - 2024</div>
+        </div>
+        <p style="font-size:0.82rem;color:var(--muted);margin:0.25rem 0 0.5rem;">
+          Edurite College of Management Studies &mdash; CGPA: 7.7
+        </p>
+        <p style="font-size:0.8rem;color:var(--muted);">
+          Built a strong foundation in computer science concepts while focusing on cybersecurity, networking, and security tooling.
         </p>
       </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 Tarun G. Built with ❤️ using HTML, CSS, and JS.</p>
+      <div class="card">
+        <div class="card-title">Selected certifications</div>
+        <ul>
+          <li>Cyber Security Professional &mdash; IIFIS &amp; NASSCOM.</li>
+          <li>Cyber Security Certification Training.</li>
+          <li>Forage Phishing Certificate.</li>
+          <li>Hands-on labs in Security Operations &amp; Incident Response (Wazuh SIEM).</li>
+        </ul>
+      </div>
     </div>
-  </footer>
+  </section>
 
-  <script src="script.js"></script>
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-header">
+      <h2>Contact &amp; links</h2>
+      <div class="section-accent"></div>
+    </div>
+    <div class="contact-grid">
+      <div class="card">
+        <div class="skills-category-title">Reach out</div>
+        <div class="contact-row">
+          <span class="contact-label">Email</span>
+          <span>tarungiri963@gmail.com</span>
+        </div>
+        <div class="contact-row">
+          <span class="contact-label">Location</span>
+          <span>Bengaluru, India</span>
+        </div>
+        <div class="contact-row">
+          <span class="contact-label">Open to</span>
+          <span class="contact-badge">SOC / Analyst</span>
+          <span class="contact-badge">VAPT / Pentest</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="skills-category-title">Profiles</div>
+        <div class="contact-row">
+          <span class="contact-label">GitHub</span>
+          <a href="https://github.com/AuraSpirit14" target="_blank" rel="noreferrer">
+            github.com/AuraSpirit14
+          </a>
+        </div>
+        <div class="contact-row">
+          <span class="contact-label">Portfolio</span>
+          <a href="https://auraspirit14.github.io/tarung.github.io" target="_blank" rel="noreferrer">
+            GitHub Pages Portfolio
+          </a>
+        </div>
+        <div class="contact-row">
+          <span class="contact-label">LinkedIn</span>
+          <a href="https://www.linkedin.com/in/tarun-g-5798511b2" target="_blank" rel="noreferrer">
+            linkedin.com/in/tarun-g-5798511b2
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div>© <span id="year"></span> Tarun G. Crafted as a cybersecurity-first portfolio, hosted on GitHub Pages.</div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
